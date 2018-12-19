@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Assigment.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/StyleSheet1.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+         <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+        <div id="header">
+            <h1>Pizza</h1>
+            <asp:Menu ID="Menu1" runat="server" CssClass="menu" DataSourceID="SiteMapDataSource1" DynamicEnableDefaultPopOutImage="False" Orientation="Horizontal" SkipLinkText="" StaticDisplayLevels="2" StaticEnableDefaultPopOutImage="False"></asp:Menu>
+                               
+            
+            </div>
+        <div id ="content">
+            <asp:ContentPlaceHolder ID="main" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id ="footer">
+            Developed by awejawejae
+        </div>
+    </form>
+</body>
+</html>
